@@ -1,0 +1,5 @@
+extension=apcu.so
+
+{% for conf in PHP.apc.conf %}
+apc.{{ conf.variable }}={{ conf.value }}
+{% endfor %}

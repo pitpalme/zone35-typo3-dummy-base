@@ -36,6 +36,14 @@ PHP:
       # Misc
       - { variable: "catch_workers_output", value: "yes" }
       # Logs
-      - { variable: "access.format",              value: "%R - %u %t \"%m %r%Q%q\" %s %f" }
+      - { variable: "access.format",              value: "%R - %u %t %m %r%Q%q %s %f" }
       - { variable: "request_slowlog_timeout",    value: "10s" }
       - { variable: "php_admin_flag[log_errors]", value: "on" }
+  apc:
+    conf:
+      - { variable: "enabled",       value: "1" }
+      - { variable: "smh_size",      value: "128M" }
+      - { variable: "ttl",           value: "3600" }
+      - { variable: "user_ttl",      value: "7200" }
+      - { variable: "gc_ttl",        value: "3600" }
+      - { variable: "max_file_size", value: "1M"}

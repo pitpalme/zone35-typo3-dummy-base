@@ -27,3 +27,7 @@
   when: PROVISION.install.apacheModPagespeed is defined and PROVISION.install.apacheModPagespeed
 
 - include: bootstrap/web.nginx.yml
+
+- include: bootstrap/apc.yml
+
+- include: bootstrap/additionalPackages.yml

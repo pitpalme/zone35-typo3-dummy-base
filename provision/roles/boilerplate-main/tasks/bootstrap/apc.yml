@@ -1,0 +1,11 @@
+---
+
+- include_vars: "/opt/docker/etc/application.{{ PROVISION_CONTEXT }}.yml"
+
+- name: Configure APC
+  template:
+    src: templates/php/apc.conf.j2
+    dest: /etc/php/7.0/mods-available/apcu.ini
+    owner: root
+    group: root
+    mode: 0644

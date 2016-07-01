@@ -1,0 +1,11 @@
+---
+
+- name: Install ghostscript for Typo3
+  apt:
+    pkg: ghostscript
+  when: PROVISION.systemUpdate and ansible_distribution == 'Ubuntu'
+
+- name: Install PHP-APC
+  apt:
+    pkg: php-apcu
+  when: PROVISION.systemUpdate and ansible_distribution == 'Ubuntu'
