@@ -10,7 +10,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile.production
+      dockerfile: Dockerfile.zone35
     links:
       - mysql
       #- postgres
