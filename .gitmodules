@@ -1,0 +1,3 @@
+[submodule "webapp"]
+	path = app/web
+	url = git@github.com:pitpalme/zone35-typo3-dummy-app.git
